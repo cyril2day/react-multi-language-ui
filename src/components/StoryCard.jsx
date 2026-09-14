@@ -1,6 +1,7 @@
-const StoryCard = () => {
+const StoryCard = ({ story }) => {
   return (
     <div>
+      {story.title}
     </div>
   )
 }
