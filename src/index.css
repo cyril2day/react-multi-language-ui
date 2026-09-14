@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --animate-fade-in: fadeIn 0.5s ease-out forwards;
