@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 
 const NotFound = () => {
@@ -15,9 +16,9 @@ const NotFound = () => {
           {t('notFoundMessage')}
         </p>
 
-        <a href='/' className='text-blue-500 hover:text-blue-700 underline'>
+        <Link to='/' className='text-blue-500 hover:text-blue-700 underline'>
           {t('returnHome')}
-        </a>
+        </Link>
       </div>
     </div>
   )
