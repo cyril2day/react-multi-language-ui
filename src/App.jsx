@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { LanguageProvider, useLanguage } from './context/LanguageContext'
+import { LanguageProvider } from './context/LanguageContext'
 import Header from './components/Header'
 import StoryList from './pages/StoryList'
 import StoryDetail from './pages/StoryDetail'
