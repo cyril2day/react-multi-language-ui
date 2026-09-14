@@ -106,7 +106,39 @@ const StoryDetail = () => {
         </div>
       </div>
 
-      <div>
+      <div className='container mx-auto px-4 py-12'>
+        <div className='max-w-4xl mx-auto'>
+          <div className='bg-white rounded-3xl shadow-2xl p-8 md:p-12'>
+            <div className='prose prose-lg max-w-none'>
+              {
+                story.content
+                .replaceAll('\\n', '\n')
+                .split('\n\n')
+                .map((paragraph, index) => {
+                  return (
+                    <p 
+                      key={index}
+                      className='text-gray-800 leading-relaxed mb-6 text-lg first-letter:text-6xl first-letter:font-bold first-letter:text-purple-600 first-letter:mr-3 first-letter:mt-1 first-letter:align-top'
+                      style={{ textIndent: index === 0 ? '0' : '2em' }}
+                    >
+                      {paragraph}
+                    </p>
+                  )
+                })
+              }
+            </div>
+          </div>
+
+          <div className='text-center mt-8'>
+            <Link
+              to='/'
+              className='inline-flex items-center space-x-2 bg-gradient-to-br from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full hover:from-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-lg font-medium'
+            >
+              <ArrowLeft className='w-5 h-5' />
+              <span>{t('backToStories')}</span>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   )
